@@ -18,17 +18,20 @@ public class MailServices {
         this.reminderServices = reminderServices;
     }
     public void sendEmail() {
+        List<ReminderDto> allMeetingByDey = reminderServices.findAllMeetingByDey();
+
         SimpleMailMessage mail = new SimpleMailMessage();
+        StringBuilder str=new StringBuilder();
         mail.setTo("bbzzyyczczeek@interia.pl");
         mail.setSubject("Testing Mail API");
-       reminderServices.findAllMeetingByDey().stream().toList().forEach(System.out::println);
+        for (ReminderDto reminderDto : allMeetingByDey) {
+            str.append(reminderDto);
+            System.out.println(str.append(reminderDto.toString()));
 
 
+            mail.setText(str.toString());
 
-
-        mail.setText("s");
-
-
+        }
         mailSender.send(mail);
     }
 }

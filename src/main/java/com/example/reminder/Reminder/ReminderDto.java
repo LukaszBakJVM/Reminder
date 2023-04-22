@@ -53,4 +53,15 @@ public class ReminderDto {
     public void setDay(LocalDate day) {
         this.day = day;
     }
+
+    @Override
+    public String toString() {
+        return "ReminderDto{" +
+                "id=" + id +
+                ", startMeeting=" + startMeeting +
+                ", durationMeeting=" + durationMeeting +
+                ", day=" + day +
+                ", personId=" + personId +
+                '}';
+    }
 }

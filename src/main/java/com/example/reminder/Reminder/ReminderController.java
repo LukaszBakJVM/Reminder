@@ -1,6 +1,7 @@
 package com.example.reminder.Reminder;
 
 
+import com.example.reminder.EmailSender.MailServices;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -12,13 +13,16 @@ import java.util.List;
 @RequestMapping("/remind")
 public class ReminderController {
     private final ReminderServices services;
+    private final MailServices mailServices;
 
-    public ReminderController(ReminderServices services) {
+    public ReminderController(ReminderServices services, MailServices mailServices) {
         this.services = services;
+        this.mailServices = mailServices;
     }
 
     @GetMapping()
     ResponseEntity<List<ReminderDto>> allMeetingByDey() {
+        mailServices.sendEmail();
         return ResponseEntity.ok(services.findAllMeetingByDey());
     }
 @PostMapping
