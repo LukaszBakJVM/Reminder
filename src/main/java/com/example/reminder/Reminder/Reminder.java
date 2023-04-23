@@ -17,7 +17,7 @@ public class Reminder {
 
     private LocalDate localDate;
     private LocalDateTime startMeeting;
-    private long durationMeeting;
+
 
 
     @ManyToOne
@@ -42,13 +42,7 @@ public class Reminder {
         this.startMeeting = startMeeting;
     }
 
-    public long getDurationMeeting() {
-        return durationMeeting;
-    }
 
-    public void setDurationMeeting(long durationMeeting) {
-        this.durationMeeting = durationMeeting;
-    }
 
 
 

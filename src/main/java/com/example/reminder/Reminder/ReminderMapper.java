@@ -22,7 +22,6 @@ public class ReminderMapper {
         Reminder reminder =new Reminder();
         reminder.setId(dto.getId());
         reminder.setStartMeeting(dto.getStartMeeting());
-        reminder.setDurationMeeting(dto.getDurationMeeting());
         LocalDate localDate=dto.getStartMeeting().toLocalDate();
         reminder.setLocalDate(localDate);
         Person person = personRepository.findById(dto.getPersonId())
@@ -34,7 +33,6 @@ public class ReminderMapper {
         ReminderDto dto =new ReminderDto();
         dto.setId(reminder.getId());
         dto.setStartMeeting(reminder.getStartMeeting());
-        dto.setDurationMeeting(reminder.getDurationMeeting());
         LocalDate localDate = reminder.getStartMeeting().toLocalDate();
         dto.setDay(localDate);
         dto.setPersonId(reminder.getPerson().getId());

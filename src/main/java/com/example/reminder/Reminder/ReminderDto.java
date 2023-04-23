@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 public class ReminderDto {
     private long id;
     private LocalDateTime startMeeting;
-    private long durationMeeting;
+
     private LocalDate day;
 
     private long personId;
@@ -28,13 +28,7 @@ public class ReminderDto {
         this.startMeeting = startMeeting;
     }
 
-    public long getDurationMeeting() {
-        return durationMeeting;
-    }
 
-    public void setDurationMeeting(long durationMeeting) {
-        this.durationMeeting = durationMeeting;
-    }
 
 
 
@@ -59,7 +53,7 @@ public class ReminderDto {
         return "ReminderDto{" +
                 "id=" + id +
                 ", startMeeting=" + startMeeting +
-                ", durationMeeting=" + durationMeeting +
+
                 ", day=" + day;
     }
 }
