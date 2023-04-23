@@ -64,4 +64,16 @@ public class PersonAddressDto {
     public void setId(long id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "PersonAddressDto{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", company='" + company + '\'' +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                '}';
+    }
 }

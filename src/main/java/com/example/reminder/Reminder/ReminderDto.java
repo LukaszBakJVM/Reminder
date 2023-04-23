@@ -60,8 +60,6 @@ public class ReminderDto {
                 "id=" + id +
                 ", startMeeting=" + startMeeting +
                 ", durationMeeting=" + durationMeeting +
-                ", day=" + day +
-                ", personId=" + personId +
-                '}';
+                ", day=" + day;
     }
 }

@@ -3,6 +3,8 @@ package com.example.reminder.Person;
 import com.example.reminder.Exection.NotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class PersonServices {
     private final PersonRepository personRepository;
@@ -21,8 +23,12 @@ public class PersonServices {
         return personMapper.map(save);
     }
     PersonAddressDto findPersonByLastName(String lastName){
-        Person person = personRepository.findByLastName(lastName).orElseThrow(()->new NotFoundException("Brak uzytkoenieka"));
+        Person person = personRepository.findByLastName(lastName).orElseThrow(()->new NotFoundException("Brak uzytkownika"));
         return personMapper.map(person);
 
+    }
+  public   PersonAddressDto findById(long id){
+        Person person = personRepository.findById(id).orElseThrow(() -> new NotFoundException("Brak uzytkownika"));
+        return personMapper.map(person);
     }
 }
