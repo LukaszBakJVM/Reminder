@@ -66,15 +66,5 @@ public class Person {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", company='" + company + '\'' +
-                ", address=" + address +
-                '}';
-    }
+
 }

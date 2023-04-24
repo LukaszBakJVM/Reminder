@@ -50,10 +50,10 @@ public class ReminderDto {
 
     @Override
     public String toString() {
-        return "ReminderDto{" +
-                "id=" + id +
-                ", startMeeting=" + startMeeting +
+        return "Spotkania  "+
 
-                ", day=" + day;
+                "Godzina  " + startMeeting +
+
+                "Dzien " + day;
     }
 }

@@ -27,7 +27,7 @@ public class MailServices {
         SimpleMailMessage mail = new SimpleMailMessage();
         StringBuilder str=new StringBuilder();
         mail.setTo("bbzzyyczczeek@interia.pl");//recipient mail
-        mail.setSubject("Testing Mail API");
+        mail.setSubject("Dzisiejsze zaplanowane spotkania");
         for (ReminderDto reminderDto : allMeetingByDey) {
             PersonAddressDto byId = personServices.findById(reminderDto.getPersonId());
 

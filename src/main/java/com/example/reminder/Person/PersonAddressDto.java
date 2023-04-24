@@ -67,13 +67,12 @@ public class PersonAddressDto {
 
     @Override
     public String toString() {
-        return "PersonAddressDto{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", company='" + company + '\'' +
-                ", city='" + city + '\'' +
-                ", street='" + street + '\'' +
-                '}';
+        return "Dane kontakotowe "+
+                "Imie " + firstName + '\'' +
+                "Nazwisko  " + lastName + '\'' +
+                "Nr telefonu  " + telephone + '\'' +
+                "Firma  " + company + '\'' +
+                "Miasto  " + city + '\'' +
+                "Ulica  " + street;
     }
 }

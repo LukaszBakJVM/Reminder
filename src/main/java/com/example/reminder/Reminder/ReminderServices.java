@@ -24,7 +24,7 @@ public class ReminderServices {
         return reminderMapper.map(save);
     }
    public List<ReminderDto>findAllMeetingByDey(){
-        return reminderRepository.findByLocalDate(localDate)
+        return reminderRepository.findByLocalDateOrderByStartMeetingAsc(localDate)
                 .stream().map(reminderMapper::map).toList();
 
 

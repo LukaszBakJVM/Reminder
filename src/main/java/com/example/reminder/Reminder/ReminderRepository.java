@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface ReminderRepository extends CrudRepository<Reminder,Long> {
 
-    List<Reminder>findByLocalDate(LocalDate localDate);
+    List<Reminder>findByLocalDateOrderByStartMeetingAsc(LocalDate localDate);
 }

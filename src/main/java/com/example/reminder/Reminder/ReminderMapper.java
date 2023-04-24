@@ -25,7 +25,7 @@ public class ReminderMapper {
         LocalDate localDate=dto.getStartMeeting().toLocalDate();
         reminder.setLocalDate(localDate);
         Person person = personRepository.findById(dto.getPersonId())
-                .orElseThrow(() -> new NotFoundException("Brak Uzytkoenike,dodaj go do bazy"));
+                .orElseThrow(() -> new NotFoundException("Brak Uzytkownika ,dodaj go do bazy"));
         reminder.setPerson(person);
         return reminder;
     }
